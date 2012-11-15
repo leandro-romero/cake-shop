@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es" ng-app="cake_shop">
+<head>
+  <meta charset="utf-8">
+  <title>Pasteles de la Osa</title>
+  
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+  <div class="container-narrow">
+
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
+        <li ng-class="navClass('home')"><a href="#/home">Home</a></li>
+        <li ng-class="navClass('galeria')"><a href="#/galeria">Galería</a></li>
+        <li ng-class="navClass('contacto')"><a href="#/contacto">Contacto</a></li>
+      </ul>
+      <h3>Pasteles de la Osa</h3>
+    </div>
+
+    <hr>
+
+    <div ng-view></div>
+
+  </div>
+
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

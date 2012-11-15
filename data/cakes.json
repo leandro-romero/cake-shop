@@ -1,0 +1,56 @@
+[
+    {
+		"id" : 1,
+        "name": "Lemon Pie",
+        "description": "Una combinación perfécta entre masa crocante y una crema de intenso sabor limón, que se completa con un esponjoso merengue. Su presentación es en tamaño grande, para que nadie se quede sin probar!",
+        "price": 40,
+        "images": ["img/lemon_pie.jpg"],
+        "thumbnail" : "img/thumbnails/t_lemon_pie.jpg",
+		"size": ""
+    },
+    {
+		"id" : 2,
+        "name": "Torta de Crema y Cerezas",
+        "description": "Sabroso bizcochuelo de chocolate relleno de crema chantilly y deliciosas cerezas.",
+        "price": 50,
+        "images": ["img/torta_cerezas.jpg"],
+        "thumbnail" : "img/thumbnails/t_torta_cerezas.jpg",
+		"size": "40cm"
+    },
+    {
+		"id" : 3,
+        "name": "Torta de Coco",
+        "description": "",
+        "price": 50,
+        "images": ["img/5.jpg"],
+        "thumbnail" : "img/thumbnails/t_5.jpg",
+		"size": "40cm"
+    },
+    {
+		"id" : 4,
+        "name": "Mini Torta de Coco",
+        "description": "",
+        "price": 20,
+        "images": ["img/6.jpg"],
+        "thumbnail" : "img/thumbnails/t_6.jpg",
+		"size": "40cm"
+    },
+    {
+		"id" : 5,
+        "name": "Torta de Chocolate",
+        "description": "",
+        "price": 50,
+        "images": ["img/7.jpg", "img/8.jpg"],
+        "thumbnail" : "img/thumbnails/t_7.jpg",
+		"size": "40cm"
+    },
+    {
+		"id" : 6,
+        "name": "Pastafrola",
+        "description": "",
+        "price": 50,
+        "images": ["img/3.jpg"],
+        "thumbnail" : "img/thumbnails/t_3.jpg",
+		"size": "40cm"
+    }
+]
