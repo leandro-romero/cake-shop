@@ -1,3 +1,5 @@
+'use strict';
+
 /* Routing */
 
 var cake_shop = angular.module('cake_shop', []);
@@ -24,7 +26,7 @@ function CakeDetailCtrl($scope, $http, $location, $routeParams) {
 
         var number_of_cakes = data.length;
 
-        if ($routeParams.tortaId > number_of_cakes) {
+        if (isNaN(parseInt($routeParams.tortaId, 10)) || $routeParams.tortaId > number_of_cakes) {
             $location.path("/home");
         }
 
