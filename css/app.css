@@ -24,15 +24,15 @@
 }
 
 .carousel .item {
-	width: 700px;
+	width: 400px;
 }
 
 .carousel img {
-	width: 700px;
+	width: 400px;
 }
 
 .carousel-inner {
-	width: 700px;
+	width: 400px;
 	margin-right: auto;
 	margin-left: auto;
 }
