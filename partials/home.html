@@ -1,3 +1,17 @@
+<div id="carousel" class="carousel">
+  <div class="carousel-inner">
+    <div class="active item">
+      <img src="img/8.jpg">
+    </div>
+    <div class="item">
+      <img src="img/3.jpg">
+    </div>
+    <div class="item">
+      <img src="img/5.jpg">
+    </div>
+  </div>
+</div>
+
 <div class="jumbotron">
   <p class="lead">Todos los productos que te ofrecemos están realizados en forma casera, y sin aditivos industriales, logrando así los sabores más intensos y definidos, y siendo la forma más sana de comer algo dulce.</p>
 </div>
@@ -21,3 +35,12 @@
     <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
   </div>
 </div>
+
+<script>
+  $(function() {
+    $('#carousel').carousel({
+      interval: 4000,
+      pause: ""
+    });
+  });
+</script>

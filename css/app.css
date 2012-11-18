@@ -22,3 +22,17 @@
 	line-height:1em;
 	vertical-align:text-top
 }
+
+.carousel .item {
+	width: 700px;
+}
+
+.carousel img {
+	width: 700px;
+}
+
+.carousel-inner {
+	width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
