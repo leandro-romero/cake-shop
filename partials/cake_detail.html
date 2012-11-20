@@ -1,9 +1,13 @@
 <h2 style="text-align:center;"><i>{{cake.name}}</i></h2>
 
 <div id="images" style="text-align:center;">
-	<img ng-src="{{cake.images[0]}}" alt="{{cake.name}}" width="500px">
+	<img class="img-rounded" ng-src="{{cake.images[0]}}" alt="{{cake.name}}" width="500px">
 </div>
 
 <hr>
 
 <p><b>Descripcion:</b><i> {{cake.description}}</i></p>
+
+<p><b>Precio:</b><span style="color : Green"> $ {{cake.price}}<span class="decimal">00</span></span></p>
+
+<p ng-show="cake.size"><b>Tama&ntilde;o:</b> {{cake.size}}</p>
