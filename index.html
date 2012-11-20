@@ -1,7 +1,9 @@
 <!doctype html>
-<html lang="es" ng-app="cake_shop">
+<html lang="es" id="ng-app" ng-app="cake_shop">
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Acá encontrarás diversidad de tortas, tartas y budines dulces, ideales para acompañar el té, el café, o el mate en cumpleaños, reuniones o con amigos." />
+  
   <title>Pasteles de la Osa</title>
   
   
@@ -22,9 +24,13 @@
 
     <hr>
 
-    <div ng-view></div>
+    <div class="ng-view"></div>
 
   </div>
+
+  <!--[if lt IE 8]>
+    <script src="lib/json3.min.js"></script>
+  <![endif]-->
 
   <script src="lib/jquery/jquery-1.8.3.min.js"></script>
   <script src="lib/bootstrap/bootstrap-carousel.min.js"></script>
