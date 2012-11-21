@@ -46,6 +46,8 @@ cake_shop.controller('NavCtrl', ['$scope', '$location', function ($scope, $locat
     };
 }]);
 
+/* Filters */
+
 cake_shop.filter('grouped', function() {
   return function(input, itemsPerRow) {
     if (itemsPerRow === undefined) {
@@ -71,3 +73,18 @@ cake_shop.filter('grouped', function() {
     return out;
   };
 });
+
+/* Directives */
+
+cake_shop.directive('popover', function () {
+    return {
+        restrict:'A',
+        link: function(scope, element, attrs)
+        {
+            $(element)
+                .attr('title', scope.$eval(attrs.title))
+                .attr('data-content', scope.$eval(attrs.description))
+                .popover({ trigger : 'hover', placement : 'bottom'});
+        }
+    }
+})
