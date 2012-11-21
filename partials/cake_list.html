@@ -1,10 +1,20 @@
 <input type="text" ng-model="query" placeholder="Buscar...">
 
+<span class="offset7" ng-init="show_galery=true">
+	<a ng-click="show_galery=true">Galería</a> | <a ng-click="show_galery=false">Lista</a>
+</span>
+
 <br/><br/>
 
-<table class="table table-condensed">
+<div ng-show="show_galery" class="row-fluid galery-row" ng-repeat="row in cake_list | filter:query | grouped:3">
+	<div class="span4" ng-repeat="cake in row">
+		<a href="#/tortas/{{cake.id}}"><img class="img-rounded img-border" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}"></a>
+	</div>
+</div>
+
+<table ng-hide="show_galery" class="table table-condensed">
     <tr ng-repeat="cake in cake_list | filter:query">
-    	<td width="100px"><a href="#/tortas/{{cake.id}}"><img class="img-rounded" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}"></a></td>
+    	<td width="100px"><a href="#/tortas/{{cake.id}}"><img width="100px" class="img-rounded" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}"></a></td>
         <td width="150px" style="text-align : center; font-weight:bold;"><a href="#/tortas/{{cake.id}}">{{cake.name}}</a></td>
         <td><i>{{cake.description}}</i></td>
         <td width="50px" style="color : Green">$ {{cake.price}}<span class="decimal">00</span></td>
