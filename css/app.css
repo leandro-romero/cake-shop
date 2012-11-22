@@ -40,3 +40,8 @@
 .gallery-row {
 	margin-bottom: 20px;
 }
+
+.switch-gallery {
+	position: relative;
+	float: right;
+}

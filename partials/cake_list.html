@@ -1,14 +1,17 @@
 <input type="text" ng-model="query" placeholder="Buscar...">
 
-<span class="offset7" ng-init="show_gallery=true">
-	<a ng-click="show_gallery=true">Galería</a> | <a ng-click="show_gallery=false">Lista</a>
-</span>
+<div class="btn-group switch-gallery" data-toggle="buttons-radio" ng-init="show_gallery=true">
+    <button type="button" class="btn btn-primary active" ng-click="show_gallery=true">Galería</button>
+    <button type="button" class="btn btn-primary" ng-click="show_gallery=false">Listado</button>
+</div>
 
 <br/><br/>
 
 <div ng-show="show_gallery" class="row-fluid gallery-row" ng-repeat="row in cake_list | filter:query | grouped:3">
 	<div class="span4" ng-repeat="cake in row">
-		<a title="cake.name" description="cake.description" href="#/tortas/{{cake.id}}" popover><img class="img-rounded img-border" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}"></a>
+		<a title="cake.name" description="cake.description" href="#/tortas/{{cake.id}}" popover>
+            <img class="img-rounded img-border" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}">
+        </a>
 	</div>
 </div>
 
