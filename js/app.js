@@ -46,34 +46,6 @@ cake_shop.controller('NavCtrl', ['$scope', '$location', function ($scope, $locat
     };
 }]);
 
-/* Filters */
-
-cake_shop.filter('grouped', function() {
-  return function(input, itemsPerRow) {
-    if (itemsPerRow === undefined) {
-      itemsPerRow = 1;
-    }
-
-    var out = [];
-    for (var i = 0; i < input.length; i++) {
-
-      var rowElementIndex = i % itemsPerRow;
-      var rowIndex = (i - rowElementIndex) / itemsPerRow;
-      var row;
-      if (rowElementIndex === 0) {
-        row = [];
-        out[rowIndex] = row;
-      } else {
-        row = out[rowIndex];
-      }
-
-      row[rowElementIndex] = input[i];
-    }
-
-    return out;
-  };
-});
-
 /* Directives */
 
 cake_shop.directive('popover', function () {
@@ -84,7 +56,16 @@ cake_shop.directive('popover', function () {
             $(element)
                 .attr('title', scope.$eval(attrs.title))
                 .attr('data-content', scope.$eval(attrs.description))
-                .popover({ trigger : 'hover', placement : 'bottom'});
+                .popover({ trigger : 'hover', placement: function (tip, element) {
+                    var offset = $(element).offset();
+                    var height = $(document).outerHeight();
+                    var width = $(document).outerWidth();
+                    var vert = 0.5 * height - offset.top;
+                    var vertPlacement = vert > 0 ? 'bottom' : 'top';
+                    var horiz = 0.5 * width - offset.left;
+                    var horizPlacement = horiz > 0 ? 'right' : 'left';
+                    return Math.abs(horiz) > Math.abs(vert) ?  horizPlacement : vertPlacement;
+                }});
         }
     }
-})
+});
