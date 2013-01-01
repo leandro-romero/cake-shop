@@ -23,15 +23,15 @@
 	vertical-align:text-top
 }
 
-.carousel .item {
+#carousel_home .item {
 	width: 400px;
 }
 
-.carousel img {
+#carousel_home img {
 	width: 400px;
 }
 
-.carousel-inner {
+#carousel_home .carousel-inner {
 	width: 400px;
 	margin-right: auto;
 	margin-left: auto;
@@ -46,6 +46,6 @@
 	float: right;
 }
 
-h1 {
+h1, h2 {
 	font-family: 'Alice', Georgia, serif;
 }

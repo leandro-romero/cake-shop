@@ -1,13 +1,32 @@
-<h2 style="text-align:center;"><i>{{cake.name}}</i></h2>
+<div class="row-fluid">
+	<div class="span7">
+		<div id="carousel_detail" class="carousel">
+			<div class="carousel-inner">
+				<div ng-class="{active : $first, item : true}" ng-repeat="image in cake.images">
+			    	<img class="img-rounded" src="{{image}}" alt="{{cake.name}}" width="500px" />
+			    </div>
+			</div>
+		</div>
+	</div>
 
-<div id="images" style="text-align:center;">
-	<img class="img-rounded" ng-src="{{cake.images[0]}}" alt="{{cake.name}}" width="500px">
+	<div class="span5">
+
+		<h2 style="text-align:center;"><i>{{cake.name}}</i></h2>
+
+		<br/>
+		<p><b>Descripción:</b><i> {{cake.description}}</i></p>
+		<br/>
+		<p><b>Precio:</b><span style="color : Green"> $ {{cake.price}}<span class="decimal">00</span></span></p>
+		<br/>
+		<p ng-show="cake.size"><b>Tama&ntilde;o:</b> {{cake.size}}</p>
+	</div>
 </div>
 
-<hr>
-
-<p><b>Descripcion:</b><i> {{cake.description}}</i></p>
-
-<p><b>Precio:</b><span style="color : Green"> $ {{cake.price}}<span class="decimal">00</span></span></p>
-
-<p ng-show="cake.size"><b>Tama&ntilde;o:</b> {{cake.size}}</p>
+<script>
+  $(function() {
+    $('#carousel_detail').carousel({
+      interval: 4000,
+      pause: ""
+    });
+  });
+</script>
