@@ -17,10 +17,14 @@
   margin-top: 28px;
 }
 
+.marketing p {
+	text-align: justify;
+}
+
 .decimal {
 	font-size:10px;
 	line-height:1em;
-	vertical-align:text-top
+	vertical-align:text-top;
 }
 
 #carousel_home .item {
@@ -41,9 +45,24 @@
 	margin-bottom: 20px;
 }
 
+.gallery-image {
+	position:relative;
+	float: left;
+	margin: 5px;
+}
+
 .switch-gallery {
 	position: relative;
 	float: right;
+}
+
+.cake-info {
+	color: Green;
+	font-weight: bold;
+}
+
+#cake-detail p {
+	padding-bottom: 5px;
 }
 
 h1, h2 {

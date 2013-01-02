@@ -24,18 +24,11 @@ function CakeListCtrl($scope, $http, $location) {
 function CakeDetailCtrl($scope, $http, $location, $routeParams) {
     $http.get('data/cakes.json').success(function(data) {
 
-        var number_of_cakes = data.length;
-
-        if (isNaN(parseInt($routeParams.tortaId, 10)) || $routeParams.tortaId > number_of_cakes) {
+        if (isNaN(parseInt($routeParams.tortaId, 10)) || $routeParams.tortaId > data.length) {
             $location.path("/home");
         }
 
-        for(var i = 0; i < number_of_cakes; i++) {
-            if (data[i].id == $routeParams.tortaId) {
-                $scope.cake = data[i];
-                break;
-            }
-        }
+        $scope.cake = data[$routeParams.tortaId - 1];
     });
 }
 

@@ -8,8 +8,8 @@
 <br/><br/>
 
 <div ng-show="show_gallery" ng-repeat="cake in cake_list | filter:query">
-    <a style="position:relative; float: left; margin: 5px;" title="cake.name" description="cake.description" href="#/tortas/{{cake.id}}" popover>
-        <img title="cake.name" description="cake.description" class="img-rounded img-border" width="290px" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}">
+    <a class="gallery-image" title="cake.name" description="cake.description" href="#/tortas/{{cake.id}}" popover>
+        <img class="img-rounded img-border" width="290px" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}">
     </a>
 </div>
 
