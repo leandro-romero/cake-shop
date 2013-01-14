@@ -17,7 +17,6 @@
     <tr ng-repeat="cake in cake_list | filter:query">
     	<td width="100px"><a href="#/tortas/{{cake.id}}"><img width="100px" class="img-rounded" ng-src="{{cake.thumbnail}}" alt="{{cake.name}}"></a></td>
         <td width="150px" style="text-align : center; font-weight:bold;"><a href="#/tortas/{{cake.id}}">{{cake.name}}</a></td>
-        <td><i>{{cake.description}}</i></td>
-        <td width="50px" style="color : Green">$ {{cake.price}}<span class="decimal">00</span></td>
+        <td>{{cake.description}}</td>
     </tr>
 </table>

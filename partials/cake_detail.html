@@ -31,6 +31,7 @@
 		<p class="cake-info" ng-show="!(cake.low_on_sugar && cake.gluten_free) && cake.gluten_free">
 			También disponible sin gluten.
 		</p>
+		<p ng-show="cake.individual_version_id"><b>Conocé la versión <a href="#/tortas/{{cake.individual_version_id}}">Individual!</a></b></p>
 	</div>
 </div>
 

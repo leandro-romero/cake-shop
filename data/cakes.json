@@ -30,7 +30,8 @@
         "thumbnail" : "img/thumbnails/t_5.jpg",
         "size": "40cm",
         "low_on_sugar": false,
-        "gluten_free": false
+        "gluten_free": false,
+        "individual_version_id" : 4
     },
     {
 		"id" : 4,
@@ -61,6 +62,17 @@
         "price": 50,
         "images": ["img/3.jpg"],
         "thumbnail" : "img/thumbnails/t_3.jpg",
+        "size": "40cm",
+        "low_on_sugar": false,
+        "gluten_free": false
+    },
+    {
+		"id" : 7,
+        "name": "Tarta de Frutillas I",
+        "description": "Una de las sabrosas opciones con frutillas. Rellena con deliciosa crema pastelera y frescas frutillas, excelente opciÃ³n para Ã©pocas de calor.",
+        "price": 60,
+        "images": ["img/tarta_frutilla_1.jpg", "img/tarta_frutilla_2.jpg", "img/tarta_frutilla_3.jpg"],
+        "thumbnail" : "img/thumbnails/t_tarta_frutilla.jpg",
         "size": "40cm",
         "low_on_sugar": false,
         "gluten_free": false
