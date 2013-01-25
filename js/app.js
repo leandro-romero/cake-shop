@@ -6,11 +6,11 @@ var cake_shop = angular.module('cake_shop', []);
 
 cake_shop.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-    	when('/home', {templateUrl: 'partials/home.html'}).
+    	when('', {templateUrl: 'partials/home.html'}).
+        when('/home', {templateUrl: 'partials/home.html'}).
     	when('/galeria', {templateUrl: 'partials/cake_list.html', controller: CakeListCtrl}).
     	when('/contacto', {templateUrl: 'partials/contact.html'}).
-        when('/tortas/:tortaId', {templateUrl: 'partials/cake_detail.html', controller: CakeDetailCtrl}).
-    	otherwise({redirectTo: 'home'});
+        when('/tortas/:tortaId', {templateUrl: 'partials/cake_detail.html', controller: CakeDetailCtrl});
 }]);
 
 /* Controllers */

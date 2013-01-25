@@ -68,3 +68,40 @@
 h1, h2 {
 	font-family: 'Alice', Georgia, serif;
 }
+
+.nav > li > a {
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 10px;
+}
+
+.nav-pills li.active > a {
+  border-style: none;
+}
+
+#precio {
+	text-align: center;
+}
+
+#precio > span {
+  display: block;
+  font: bold 20px/80px Georgia, Serif;
+  color: #777;
+  background: #fff;
+  border: 5px solid #fff;
+  height: 80px;
+  width: 80px;
+  margin: 10px auto -65px;
+  -moz-border-radius: 80px;
+  -webkit-border-radius: 80px;
+  border-radius: 80px;
+  -moz-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+  -webkit-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+  box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+}
+
+@media only screen and (min-width : 1824px) {
+  #logo {
+    margin-left: 300px;
+  }
+}

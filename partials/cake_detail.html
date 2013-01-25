@@ -16,11 +16,9 @@
 		<h2 style="text-align:center;"><i>{{cake.name}}</i></h2>
 
 		<br/>
-		<p><b>Descripción:</b> {{cake.description}}</p>
+		<p style="text-align: justify;">{{cake.full_description}}</p>
 
-		<p><b>Precio:</b><span style="color : Green"> $ {{cake.price}}<span class="decimal">00</span></span></p>
-
-		<p ng-show="cake.size"><b>Tama&ntilde;o:</b> {{cake.size}}</p>
+		<p ng-show="cake.size"><b>Presentación:</b> {{cake.size}}</p>
 
 		<p class="cake-info" ng-show="cake.low_on_sugar && cake.gluten_free">
 			También disponible sin gluten o con bajo contenido de azúcar.
@@ -32,6 +30,10 @@
 			También disponible sin gluten.
 		</p>
 		<p ng-show="cake.individual_version_id"><b>Conocé la versión <a href="#/tortas/{{cake.individual_version_id}}">Individual!</a></b></p>
+
+		<div id="precio">
+    		<span>${{cake.price}}<span class="decimal">00</span></span>
+		</div>
 	</div>
 </div>
 

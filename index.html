@@ -8,22 +8,38 @@
   <title>Pasteles de la Osa</title>
   
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice"/>
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css">
   <link rel="stylesheet" href="css/app.css"/>
 
   <link rel="shortcut icon" href="favicon.png">
+
+  
+  <!--[if lt IE 8]>
+    <script src="lib/json3.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+  <![endif]-->
+  <!--[if gte IE 9]><!-->
+    <script src="http://code.jquery.com/jquery-2.0.0b1.min.js"></script>
+  <!--[endif]-->
+
+  <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
 <body>
 
-  <img src="logo.jpg" width="180" style="position:relative; float:left;" alt="Pasteles de la Osa logo"/>
+  <img id="logo" src="logo.jpg" width="180" height="194" style="position:relative; float:left;" alt="Pasteles de la Osa logo"/>
 
   <div class="container-narrow">
 
     <div class="masthead">
       <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
-        <li ng-class="navClass('home')"><a href="#/home">Home</a></li>
-        <li ng-class="navClass('galeria')"><a href="#/galeria">Galería</a></li>
-        <li ng-class="navClass('contacto')"><a href="#/contacto">Contacto</a></li>
+        <li ng-class="navClass('home')"><a href="#/home"><i class="icon-home"></i> Home</a></li>
+        <li ng-class="navClass('galeria')"><a href="#/galeria"><i class="icon-camera"></i> Galería</a></li>
+        <li ng-class="navClass('contacto')"><a href="#/contacto"><i class="icon-envelope"></i> Contacto</a></li>
       </ul>
       <h1>Pasteles de la Osa</h1>
     </div>
@@ -33,14 +49,5 @@
     <div class="ng-view"></div>
 
   </div>
-
-  <!--[if lt IE 8]>
-    <script src="lib/json3.min.js"></script>
-  <![endif]-->
-
-  <script src="lib/jquery/jquery-1.8.3.min.js"></script>
-  <script src="lib/bootstrap/bootstrap.min.js"></script>
-  <script src="lib/angular/angular.min.js"></script>
-  <script src="js/app.js"></script>
 </body>
 </html>
