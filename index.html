@@ -30,21 +30,16 @@
   <script src="js/app.js"></script>
 </head>
 <body>
-
-  <img id="logo" src="logo.jpg" width="180" height="194" style="position:relative; float:left;" alt="Pasteles de la Osa logo"/>
-
   <div class="container-narrow">
 
-    <div class="masthead">
-      <ul class="nav nav-pills pull-right" ng-controller="NavCtrl">
-        <li ng-class="navClass('home')"><a href="#/home"><i class="icon-home"></i> Home</a></li>
-        <li ng-class="navClass('galeria')"><a href="#/galeria"><i class="icon-camera"></i> Galería</a></li>
-        <li ng-class="navClass('contacto')"><a href="#/contacto"><i class="icon-envelope"></i> Contacto</a></li>
-      </ul>
-      <h1>Pasteles de la Osa</h1>
-    </div>
+    <img src="header.jpg" width="900" height="330" alt="Pasteles de la Osa"/>
 
-    <hr>
+    <ul class="nav-pills" style="list-style-type: none; margin-top:15px; margin-bottom: 50px; color: Brown;" ng-controller="NavCtrl">
+      <li ng-class="navClass('home')"><a href="#/home"><i class="icon-home"></i> Home</a></li>
+      <li ng-class="navClass('pasteleria')"><a href="#/pasteleria"><i class="icon-camera"></i> Pastelería</a></li>
+      <li ng-class="navClass('mini_pasteleria')"><a href="#/mini_pasteleria"><i class="icon-camera"></i> Mini Pastelería</a></li>
+      <li ng-class="navClass('contacto')"><a href="#/contacto"><i class="icon-envelope"></i> Contacto</a></li>
+    </ul>
 
     <div class="ng-view"></div>
 

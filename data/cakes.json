@@ -9,7 +9,8 @@
         "thumbnail" : "img/thumbnails/t_lemon_pie.jpg",
         "size": "",
         "low_on_sugar": false,
-        "gluten_free": false
+        "gluten_free": false,
+        "tipo": "pasteleria"
     },
     {
 		"id" : 2,
@@ -22,7 +23,8 @@
         "size": "40cm",
         "low_on_sugar": false,
         "gluten_free": false,
-        "individual_version_id" : 3
+        "individual_version_id" : 3,
+        "tipo": "pasteleria"
     },
     {
 		"id" : 3,
@@ -34,19 +36,21 @@
         "thumbnail" : "img/thumbnails/t_6.jpg",
         "size": "40cm",
         "low_on_sugar": false,
-        "gluten_free": false
+        "gluten_free": false,
+        "tipo": "mini_pasteleria"
     },
     {
 		"id" : 4,
         "name": "Torta bicolor",
-        "description": "Biscochuelos de vainilla y chocolate con dulce de leche. Dos pisos.",
-        "full_description": "Torta de dos pisos de biscochuelos de vainilla y chocolate intercalados, rellenos con dulce de leche repostero. La cobertura es de baño de repostería sabor chocolate, decorada con dulce de leche.",
+        "description": "Bizcochuelos de vainilla y chocolate con dulce de leche. Dos pisos.",
+        "full_description": "Torta de dos pisos de bizcochuelos de vainilla y chocolate intercalados, rellenos con dulce de leche repostero. La cobertura es de baño de repostería sabor chocolate, decorada con dulce de leche.",
         "price": 70,
         "images": ["img/8.jpg", "img/7.jpg"],
         "thumbnail" : "img/thumbnails/t_8.jpg",
         "size": "40cm",
         "low_on_sugar": false,
-        "gluten_free": false
+        "gluten_free": false,
+        "tipo": "pasteleria"
     },
     {
 		"id" : 5,
@@ -59,7 +63,8 @@
         "size": "40cm",
         "low_on_sugar": true,
         "gluten_free": true,
-        "individual_version_id" : 7
+        "individual_version_id" : 7,
+        "tipo": "pasteleria"
     },
     {
 		"id" : 6,
@@ -71,7 +76,8 @@
         "thumbnail" : "img/thumbnails/t_tarta_frutilla.jpg",
         "size": "40cm",
         "low_on_sugar": true,
-        "gluten_free": true
+        "gluten_free": true,
+        "tipo": "pasteleria"
     },
     {
         "id" : 7,
@@ -83,7 +89,8 @@
         "thumbnail" : "img/thumbnails/t_mini_pastafrola.jpg",
         "size": "20cm",
         "low_on_sugar": true,
-        "gluten_free": true
+        "gluten_free": true,
+        "tipo": "mini_pasteleria"
     },
     {
         "id" : 8,
@@ -95,6 +102,7 @@
         "thumbnail" : "img/thumbnails/t_mini_ricota.jpg",
         "size": "20cm",
         "low_on_sugar": false,
-        "gluten_free": false
+        "gluten_free": false,
+        "tipo": "mini_pasteleria"
     }
 ]

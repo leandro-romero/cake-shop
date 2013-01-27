@@ -8,16 +8,36 @@ cake_shop.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     	when('', {templateUrl: 'partials/home.html'}).
         when('/home', {templateUrl: 'partials/home.html'}).
-    	when('/galeria', {templateUrl: 'partials/cake_list.html', controller: CakeListCtrl}).
+    	when('/pasteleria', {templateUrl: 'partials/cake_list.html', controller: CakeListCtrl}).
+        when('/mini_pasteleria', {templateUrl: 'partials/cake_list.html', controller: MiniCakeListCtrl}).
     	when('/contacto', {templateUrl: 'partials/contact.html'}).
         when('/tortas/:tortaId', {templateUrl: 'partials/cake_detail.html', controller: CakeDetailCtrl});
 }]);
 
 /* Controllers */
 
+function filtrar_tipo(list, type) {
+    var cake_list = [];
+
+    for(var i = 0; i < list.length; i++) {
+        if (list[i].tipo == type) {
+            cake_list.push(list[i]);
+        }
+    }
+
+    return cake_list;
+}
+
 function CakeListCtrl($scope, $http, $location) {
     $http.get('data/cakes.json').success(function(data) {
-        $scope.cake_list = data;
+        $scope.cake_list = filtrar_tipo(data, "pasteleria");
+    });
+}
+
+function MiniCakeListCtrl($scope, $http, $location) {
+    $http.get('data/cakes.json').success(function(data) {
+        $scope.cake_list = filtrar_tipo(data, "mini_pasteleria");
+        $scope.mini_pasteleria = true;
     });
 }
 
